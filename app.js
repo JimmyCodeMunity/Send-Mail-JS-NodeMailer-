@@ -8,20 +8,20 @@ const html = `
 
 async function main(){
     const transporter = nodeMailer.createTransport({
-        host:'smtp.gmail.com',
+        host:'smtp.gmail.com',//if using google
         port:465,
         secure:true,
         auth:{
-            user:'ghostbmer@gmail.com',
-            pass:'whfqcsjysphutdgo'
+            user:'',//host username here-could be email
+            pass:''//host password here
         }
     });
 
     const info = await transporter.sendMail({
-        from:'ghostbmer@gmail.com',
-        to:'collinsmuemah@gmail.com',
+        from:'',//sender email
+        to:'',//receiveremail
         subject:'Testing Nodemailer',
-        html:html
+        html:html //this is the defined body
     
 
     });
